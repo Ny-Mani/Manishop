@@ -16,13 +16,12 @@ import {
   ImageBackground,
 } from "react-native";
 
-import { shoes } from "../assets/shoes";
-import { Card } from "../Component/Card";
-import { CategoryList } from "../Component/CategoryList";
+import { watches } from "../assets/watches";
+import { Card } from "./Card";
 
-import Cart from "../Screens/Cart"; //remove
 
-export default function Home({ navigation }) {
+
+export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView
       style={{ flex: 1, paddingHorizontal: 20, backgroundColor: "#131313" }}
@@ -41,7 +40,7 @@ export default function Home({ navigation }) {
           />
         </View>
       </View>
-      <CategoryList />
+
       <FlatList
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
@@ -49,8 +48,8 @@ export default function Home({ navigation }) {
           paddingBottom: 50,
         }}
         numColumns={2}
-        data={shoes}
-        renderItem={({ item }) => <Card shoe={item} />}
+        data={watches}
+        renderItem={({ item }) => <Card watches={item} />}
       />
     </SafeAreaView>
   );
